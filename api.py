@@ -1,12 +1,9 @@
 import datetime as dt
+from flask import Flask, jsonify, request
 from ipaddress import ip_network, ip_address
 import netaddr
 
-from flask import Flask, jsonify, request
-
-
 class UserStatusSearch:
-
     RECORDS = [
         {'user_id': 1, 'created_at': '2017-01-01T10:00:00', 'status': 'paying'},
         {'user_id': 1, 'created_at': '2017-03-01T19:00:00', 'status': 'paying'},
@@ -28,11 +25,8 @@ class UserStatusSearch:
             return value
         except:
             return 'non-paying'
-            
-        
 
 class IpRangeSearch:
-
     RANGES = {
         'london': [
             {'start': '10.10.0.0', 'end': '10.10.255.255'},
@@ -59,14 +53,6 @@ class IpRangeSearch:
             if (ip_address(ip) in cidr_tuple[1]):
                 return cidr_tuple[0]
         return 'unknown'
-        
-        # net = ip_network("10.10.0.0/16")
-        # cidrs = netaddr.iprange_to_cidrs('172.16.10.0', '172.16.11.255')
-        # net2 = ip_network(str(cidrs[0]))
-        # print(net)
-        # print("************************")
-        # print(net2)
-        # print(ip_address(ip) in net2)
 
 
 app = Flask(__name__)
