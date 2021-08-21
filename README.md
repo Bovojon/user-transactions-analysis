@@ -43,8 +43,6 @@ python api.py
 ### Delivery
 
 Please provide a zip or tar file containing your complete implementation.
-# user-transactions-analysis
-
 
 ## Test
 
@@ -57,3 +55,11 @@ Open another terminal and run the following to generate the final aggregate resu
 ```
 python enrichment.py
 ```
+
+Notes:
+* I added the following test case to `RECORDS` since none of the existing records in `transactions.json` has a date that is in `RECORDS`, so all return `unkown`.
+```
+  {'user_id': 3, 'created_at': '2017-10-03T12:52:33', 'status': 'paying'},
+```
+* The aggregate is produced in `aggregate.json`.
+* The enriched transactions are produced in `enrichedTransactions.json`.
