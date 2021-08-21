@@ -44,3 +44,16 @@ python api.py
 
 Please provide a zip or tar file containing your complete implementation.
 # user-transactions-analysis
+
+
+## Test
+
+Open a terminal and run the following:
+```
+pip install -r requirements.txt
+python api.py
+```
+Open another terminal and run the following to generate the final aggregate result and the enriched transactions:
+```
+python enrichment.py
+```
