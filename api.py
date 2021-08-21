@@ -10,6 +10,7 @@ class UserStatusSearch:
         {'user_id': 1, 'created_at': '2017-02-01T12:00:00', 'status': 'cancelled'},
         {'user_id': 3, 'created_at': '2017-10-01T10:00:00', 'status': 'paying'},
         {'user_id': 3, 'created_at': '2016-02-01T05:00:00', 'status': 'cancelled'},
+        {'user_id': 3, 'created_at': '2017-10-03T12:52:33', 'status': 'paying'},
     ]
 
     def __init__(self):
