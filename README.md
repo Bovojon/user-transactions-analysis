@@ -1,4 +1,4 @@
-# Data Engineer Task
+# User Transactions Analysis
 
 The goal is to process a file and enrich it with data provided by an API in order to provide high-level aggregate info.
 
